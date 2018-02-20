@@ -1,0 +1,12 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "just-another-sp-gallery-webpart-client-side-solution",
+    "id": "af0cfcc3-c8ea-431f-8ba5-862ea8bc76de",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
+  },
+  "paths": {
+    "zippedPackage": "solution/just-another-sp-gallery-webpart.sppkg"
+  }
+}
