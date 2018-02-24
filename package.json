@@ -19,7 +19,10 @@
     "@microsoft/sp-webpart-base": "~1.4.1",
     "@microsoft/sp-lodash-subset": "~1.4.1",
     "@microsoft/sp-office-ui-fabric-core": "~1.4.1",
-    "@types/webpack-env": ">=1.12.1 <1.14.0"
+    "@types/webpack-env": ">=1.12.1 <1.14.0",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.0"
   },
   "devDependencies": {
     "@microsoft/sp-build-web": "~1.4.1",
