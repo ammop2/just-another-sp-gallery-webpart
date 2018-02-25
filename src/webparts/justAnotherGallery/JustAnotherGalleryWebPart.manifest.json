@@ -20,7 +20,8 @@
     "description": { "default": "image gallery with image meta informations" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "JustAnotherGallery"
+      "description": "JustAnotherGallery",
+      "listId": null
     }
   }]
 }

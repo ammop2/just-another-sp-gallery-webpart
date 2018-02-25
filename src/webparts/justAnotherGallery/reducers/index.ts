@@ -1,11 +1,11 @@
 import { combineReducers, Reducer } from 'redux';
 
-import webpartReducer, { IWebpartState } from './webpart';
+import galleryReducer, { IGalleryState } from './gallery';
 
 export interface IState {
-  webpart: IWebpartState;
+  gallery: IGalleryState;
 }
 
 export const rootReducer: Reducer<IState> = combineReducers<IState>({
-  webpart: webpartReducer
+  gallery: galleryReducer
 });

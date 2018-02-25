@@ -5,6 +5,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 
 export default class JustAnotherGallery extends React.Component<IJustAnotherGalleryProps, {}> {
   public render(): React.ReactElement<IJustAnotherGalleryProps> {
+
     return (
       <div className={ styles.justAnotherGallery }>
         <div className={ styles.container }>
