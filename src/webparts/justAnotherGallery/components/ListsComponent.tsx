@@ -5,12 +5,13 @@ import {ISPImage} from "../interfaces/ISPImage";
 
 export interface IListComponentProps {
   pictures: ISPImage[];
+  takeThumbnail: boolean;
 }
 
 
-const ListComponent = ({pictures}: IListComponentProps) => (
+const ListComponent = ({pictures, takeThumbnail}: IListComponentProps) => (
   <div>
-    {pictures != null ? pictures.map((list, i) => <img src={list.FileRef} key={'image-'+i}/>) : 'no picutures'}
+    {pictures != null ? pictures.map((list, i) => <img src={ takeThumbnail ? list.EncodedAbsThumbnailUrl:list.FileRef} key={'image-'+i}/>) : 'no picutures'}
   </div>
 );
 

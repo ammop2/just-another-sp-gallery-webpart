@@ -1,3 +1,4 @@
+import {ISPImage} from "../interfaces/ISPImage";
 export interface IJustAnotherGalleryProps {
-  description: string;
+  images: ISPImage[];
 }

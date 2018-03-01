@@ -13,16 +13,16 @@ export default class ImageService {
 
     if (environmentType === EnvironmentType.Local) {
       const items: ISPImage[] = [
-        {ImageHeight: 183, ImageWidth: 275, FileRef: '/lib/assets/cats/cat1.jpg'},
-        {ImageHeight: 279, ImageWidth: 180, FileRef: '/lib/assets/cats/cat2.jpg'},
-        {ImageHeight: 183, ImageWidth: 275, FileRef: '/lib/assets/cats/cat3.jpg'},
-        {ImageHeight: 225, ImageWidth: 225, FileRef: '/lib/assets/dogs/dog1.jpg'},
-        {ImageHeight: 183, ImageWidth: 275, FileRef: '/lib/assets/dogs/dog2.jpg'},
-        {ImageHeight: 168, ImageWidth: 300, FileRef: '/lib/assets/dogs/dog3.jpg'},
+        {ImageHeight: 183, ImageWidth: 275, FileRef: '/lib/assets/cats/cat1.jpg', EncodedAbsThumbnailUrl: '/lib/assets/cats/cat1.jpg'},
+        {ImageHeight: 279, ImageWidth: 180, FileRef: '/lib/assets/cats/cat2.jpg', EncodedAbsThumbnailUrl: '/lib/assets/cats/cat1.jpg'},
+        {ImageHeight: 183, ImageWidth: 275, FileRef: '/lib/assets/cats/cat3.jpg', EncodedAbsThumbnailUrl: '/lib/assets/cats/cat1.jpg'},
+        {ImageHeight: 225, ImageWidth: 225, FileRef: '/lib/assets/dogs/dog1.jpg', EncodedAbsThumbnailUrl: '/lib/assets/cats/cat1.jpg'},
+        {ImageHeight: 183, ImageWidth: 275, FileRef: '/lib/assets/dogs/dog2.jpg', EncodedAbsThumbnailUrl: '/lib/assets/cats/cat1.jpg'},
+        {ImageHeight: 168, ImageWidth: 300, FileRef: '/lib/assets/dogs/dog3.jpg', EncodedAbsThumbnailUrl: '/lib/assets/cats/cat1.jpg'},
       ];
 
       return new Promise<ISPImage[]>((resolve) => {
-        if(spFolder) {
+        if (spFolder) {
           resolve(items.filter(i => i.FileRef.indexOf(spFolder.UniqueId) > 0));
         }
         else {
@@ -33,7 +33,8 @@ export default class ImageService {
     else if (environmentType == EnvironmentType.SharePoint ||
       environmentType == EnvironmentType.ClassicSharePoint) {
 
-      let url = `${context.pageContext.web.absoluteUrl}/_api/Web/Lists(guid'${spList.Id}')/items?$select=FileRef,ImageWidth,ImageHeight&$filter=ContentTypeId eq '0x01010200D0CF778C1538E542909C24F9A7F6BA0F'`;
+
+      let url = `${context.pageContext.web.absoluteUrl}/_api/Web/Lists(guid'${spList.Id}')/items?$select=FileRef,ImageWidth,ImageHeight,EncodedAbsThumbnailUrl&$filter=ContentTypeId eq '0x01010200D0CF778C1538E542909C24F9A7F6BA0F'`;
 
       if (spFolder) {
         url += ` and startswith(FileRef,  '${context.pageContext.web.serverRelativeUrl}/${spList.Title}/${spFolder.Name}')`

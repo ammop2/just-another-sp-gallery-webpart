@@ -2,15 +2,15 @@ import * as React from 'react';
 import {connect} from 'react-redux';
 
 import {IState} from '../store';
-import ListsComponent from '../components/ListsComponent';
+import JustAnotherGallery from '../components/JustAnotherGallery';
 
 const mapStateToProps = (state: IState) => ({
-  pictures: state.gallery.pictures,
+  images: state.gallery.pictures,
 });
 
-const DefaultContainer = ({pictures}) => (
+const DefaultContainer = ({images}) => (
   <div>
-    <ListsComponent pictures={pictures}/>
+    <JustAnotherGallery images={images}/>
   </div>
 );
 

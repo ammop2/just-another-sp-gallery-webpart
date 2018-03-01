@@ -1,10 +1,8 @@
 define([], function() {
   return {
-    "PropertyPaneDescription": "Description",
-    "BasicGroupName": "Group Name",
-    "DescriptionFieldLabel": "Description Field",
+    "SourceSettingsGroupName": "Source Settings",
     "PictureLibraryFieldLabel": "Picture Library",
     "FolderFieldLabel": "Folder",
-    "AllFolders": "All"
+    "AllFolders": "All",
   }
 });

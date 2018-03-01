@@ -1,6 +1,6 @@
 declare interface IJustAnotherGalleryWebPartStrings {
   PropertyPaneDescription: string;
-  BasicGroupName: string;
+  SourceSettingsGroupName: string;
   DescriptionFieldLabel: string;
   FolderFieldLabel: string;
   AllFolders: string;

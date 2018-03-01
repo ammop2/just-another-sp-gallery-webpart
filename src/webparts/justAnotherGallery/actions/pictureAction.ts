@@ -6,8 +6,10 @@ export interface IApplyPicturesAction {
   pictures: ISPImage[];
 }
 
+
 export type IPictureAction = IApplyPicturesAction
 
 export function applyPictures(pictures: ISPImage[]) {
   return { type: PictureLibraryActions.ApplyPictures, pictures };
 }
+
